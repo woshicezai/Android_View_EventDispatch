@@ -1,0 +1,2 @@
+# Android_View_EventDispatch
+学习android的view的事件分发机制
