@@ -40,19 +40,22 @@ public class ViewGroup1 extends LinearLayout {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(MainActivity.TOUCH_LOG, "onTouchEvent-1");
-        return super.onTouchEvent(event);
+        Boolean b = super.onTouchEvent(event);
+        Log.d(MainActivity.TOUCH_LOG, "onTouchEvent-1" + String.valueOf(b));
+        return b;
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.d(MainActivity.TOUCH_LOG, "dispatchTouchEvent-1");
-        return super.dispatchTouchEvent(ev);
+        Boolean b = super.dispatchTouchEvent(ev);
+        Log.d(MainActivity.TOUCH_LOG, "dispatchTouchEvent-1" + String.valueOf(b));
+        return b;
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.d(MainActivity.TOUCH_LOG, "onInterceptTouchEvent-1");
-        return true;
+        Boolean b = super.onInterceptTouchEvent(ev);
+        Log.d(MainActivity.TOUCH_LOG, "onInterceptTouchEvent-1" + String.valueOf(b));
+        return b;
     }
 }

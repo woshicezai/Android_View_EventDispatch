@@ -27,14 +27,16 @@ public class TView extends AppCompatTextView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        Log.d(MainActivity.TOUCH_LOG, "dispatchTouchEvent-view1");
-        return super.dispatchTouchEvent(event);
+        Boolean b = super.dispatchTouchEvent(event);
+        Log.d(MainActivity.TOUCH_LOG, "dispatchTouchEvent-view1" + String.valueOf(b));
+        return b;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(MainActivity.TOUCH_LOG, "onTouchEvent-view1");
-        return super.onTouchEvent(event);
+        Boolean b = super.onTouchEvent(event);
+        Log.d(MainActivity.TOUCH_LOG, "onTouchEvent-view1" + String.valueOf(b));
+        return b;
     }
 
 
