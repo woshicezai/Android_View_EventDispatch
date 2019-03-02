@@ -12,47 +12,47 @@ import android.widget.LinearLayout;
 import com.example.hll_mall.learnlayout.MainActivity;
 import com.example.hll_mall.learnlayout.R;
 
-public class ParentView extends LinearLayout {
-    public ParentView(Context context) {
+public class ViewGroup1 extends LinearLayout {
+    public ViewGroup1(Context context) {
         super(context);
         initView(context);
     }
 
     private void initView(Context context) {
-        ViewGroup viewGroup = (ViewGroup) View.inflate(context, R.layout.view_parent, null);
+        ViewGroup viewGroup = (ViewGroup) View.inflate(context, R.layout.view_1, null);
         addView(viewGroup);
     }
 
-    public ParentView(Context context, @Nullable AttributeSet attrs) {
+    public ViewGroup1(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView(context);
     }
 
-    public ParentView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ViewGroup1(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context);
     }
 
-    public ParentView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ViewGroup1(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         initView(context);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(MainActivity.TOUCH_LOG, "onTouchEvent-P");
+        Log.d(MainActivity.TOUCH_LOG, "onTouchEvent-1");
         return super.onTouchEvent(event);
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.d(MainActivity.TOUCH_LOG, "dispatchTouchEvent-P");
+        Log.d(MainActivity.TOUCH_LOG, "dispatchTouchEvent-1");
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.d(MainActivity.TOUCH_LOG, "onInterceptTouchEvent-P");
-        return super.onInterceptTouchEvent(ev);
+        Log.d(MainActivity.TOUCH_LOG, "onInterceptTouchEvent-1");
+        return true;
     }
 }
