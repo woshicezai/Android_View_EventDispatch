@@ -53,6 +53,6 @@ public class ViewGroup1 extends LinearLayout {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.d(MainActivity.TOUCH_LOG, "onInterceptTouchEvent-1");
-        return true;
+        return super.onInterceptTouchEvent(ev);
     }
 }
